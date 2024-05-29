@@ -2,8 +2,15 @@
   "name": "cgoit/contao-onepage-bundle",
   "type": "contao-bundle",
   "description": "This Onepage Bundle add a one page navigation module to Contao Open Source CMS. No jQuery required!",
-  "keywords": ["onepage","one","page","navigation","article","contao"],
-  "version": "3.0.0",
+  "keywords": [
+    "onepage",
+    "one",
+    "page",
+    "navigation",
+    "article",
+    "contao"
+  ],
+  "version": "4.0.0",
   "homepage": "https://github.com/cgoIT/contao-onepage-bundle",
   "license": "GPL-3.0-or-later",
   "authors": [
