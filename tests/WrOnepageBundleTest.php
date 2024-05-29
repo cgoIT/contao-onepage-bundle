@@ -11,14 +11,17 @@ declare(strict_types=1);
  * @license    LGPL-3.0-or-later
  */
 
-namespace Wr\OnepageBundle;
+namespace Wr\OnepageBundle\Tests;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use PHPUnit\Framework\TestCase;
+use Wr\OnepageBundle\WrOnepageBundle;
 
-class WrOnepageBundle extends Bundle
+class WrOnepageBundleTest extends TestCase
 {
-    public function getPath(): string
+    public function testCanBeInstantiated(): void
     {
-        return \dirname(__DIR__);
+        $bundle = new WrOnepageBundle();
+
+        $this->assertInstanceOf(WrOnepageBundle::class, $bundle);
     }
 }

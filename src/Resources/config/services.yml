@@ -1,4 +1,0 @@
-services:
-    wr.onepage.hooks:
-        class: Wr\OnepageBundle\Service\OnepageHooks
-        public: true

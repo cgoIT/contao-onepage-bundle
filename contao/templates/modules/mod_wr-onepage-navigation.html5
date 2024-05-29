@@ -8,8 +8,8 @@
 
     <ul>
         <?php foreach($this->arrArticle as $artNav): ?>
-            <li> <a href="<?= $this->uri?>#<?= $artNav['alias']?>"><?php echo $artNav['title'] ?></a></li>
-        <?php endforeach;?>
+            <li> <a href="<?= $this->uri?>#<?= $artNav['alias']?>"><?= $artNav['title'] ?></a></li>
+        <?php endforeach; ?>
 
     </ul>
 
@@ -22,6 +22,6 @@
                 onepage.init();
             }
         </script>
-    <?php endif;?>
+    <?php endif; ?>
 </nav>
-<?php endif;?>
+<?php endif; ?>

@@ -1,3 +1,16 @@
+# Composer
+/composer.lock
+/vendor/
 
-*.codekit3
-.idea/*
+# PhpUnit
+/.phpunit.result.cache
+/phpunit.xml
+
+# Tools
+/tools/*/vendor
+
+# PHPStorm
+.idea/
+
+# Mac
+.DS_Store

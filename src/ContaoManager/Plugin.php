@@ -1,28 +1,26 @@
 <?php
 
-/**
- * @copyright 2017 Webrealisierung GmbH
+declare(strict_types=1);
+
+/*
+ * This file is part of cgoit\contao-onepage-bundle for Contao Open Source CMS.
  *
- * @license LGPL-3.0+
+ * @copyright  Copyright (c) 2024, cgoIT
+ * @author     cgoIT <https://cgo-it.de>
+ * @author     Daniel Steuri <https://webrealisierung.ch>
+ * @license    LGPL-3.0-or-later
  */
 
 namespace Wr\OnepageBundle\ContaoManager;
 
-use Wr\OnepageBundle\WrOnepageBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Wr\OnepageBundle\WrOnepageBundle;
 
-/**
- * @author Daniel Steuri <mail@webrealisierung.ch>
- * @package Wr\OnepageBundle
- */
 class Plugin implements BundlePluginInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     public function getBundles(ParserInterface $parser)
     {
         return [
