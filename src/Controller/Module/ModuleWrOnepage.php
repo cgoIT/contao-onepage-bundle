@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @license    LGPL-3.0-or-later
  */
 
-namespace Wr\OnepageBundle\Controller\Module;
+namespace Cgoit\ContaoOnepageBundle\Controller\Module;
 
 use Contao\ArticleModel;
 use Contao\Environment;

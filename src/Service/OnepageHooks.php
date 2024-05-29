@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @license    LGPL-3.0-or-later
  */
 
-namespace Wr\OnepageBundle\Service;
+namespace Cgoit\ContaoOnepageBundle\Service;
 
 use Contao\ArticleModel;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;

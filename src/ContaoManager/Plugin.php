@@ -11,20 +11,20 @@ declare(strict_types=1);
  * @license    LGPL-3.0-or-later
  */
 
-namespace Wr\OnepageBundle\ContaoManager;
+namespace Cgoit\ContaoOnepageBundle\ContaoManager;
 
+use Cgoit\ContaoOnepageBundle\CgoitContaoOnepageBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Wr\OnepageBundle\WrOnepageBundle;
 
 class Plugin implements BundlePluginInterface
 {
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create(WrOnepageBundle::class)
+            BundleConfig::create(CgoitContaoOnepageBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
