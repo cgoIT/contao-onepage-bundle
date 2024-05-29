@@ -1,3 +1,13 @@
 services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+        public: false
+        bind:
+            $urlGenerator: '@contao.routing.page_url_generator'
+
     Cgoit\ContaoOnepageBundle\:
         resource: ../src/*
+
+#    Cgoit\ContaoOnepageBundle\Controller\Module\ModuleWrOnepage:
+#        public: true

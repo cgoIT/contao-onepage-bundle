@@ -14,34 +14,43 @@ declare(strict_types=1);
 namespace Cgoit\ContaoOnepageBundle\Controller\Module;
 
 use Contao\ArticleModel;
+use Contao\CoreBundle\Controller\FrontendModule\AbstractFrontendModuleController;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsFrontendModule;
 use Contao\Environment;
-use Contao\Module;
+use Contao\ModuleModel;
 use Contao\PageModel;
 use Contao\StringUtil;
-use Contao\System;
+use Contao\Template;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Generator\UrlGenerator;
 
-class ModuleWrOnepage extends Module
+#[AsFrontendModule(type: ModuleWrOnepage::TYPE, category: 'navigationMenu', template: 'mod_wr-onepage-navigation')]
+class ModuleWrOnepage extends AbstractFrontendModuleController
 {
-    protected $strTemplate = 'mod_wr-onepage-navigation';
+    final public const TYPE = 'wr-onepage-navigation';
 
-    protected function compile(): void
+    public function __construct(private readonly UrlGenerator $urlGenerator)
+    {
+    }
+
+    protected function getResponse(Template $template, ModuleModel $model, Request $request): Response
     {
         global $objPage;
-        if ($this->rootPage) {
-            $Articles = ArticleModel::findByPid($this->rootPage, ['order' => 'sorting']);
-            $rootPageId = PageModel::findById($this->rootPage);
-            $this->Template->uri = $rootPageId->getFrontendUrl('');
+        if ($model->rootPage) {
+            $Articles = ArticleModel::findByPid($model->rootPage, ['order' => 'sorting']);
+            $rootPageId = PageModel::findById($model->rootPage);
+            $template->uri = $rootPageId->getFrontendUrl('');
         } else {
             $Articles = ArticleModel::findByPid($objPage->id, ['order' => 'sorting']);
-            $urlGenerator = System::getContainer()->get('contao.routing.url_generator');
-            $this->Template->uri = $url = $urlGenerator->generate($objPage->alias);
+            $template->uri = $this->urlGenerator->generate($objPage->alias);
         }
 
-        if ($this->loadDefaultJavascript) {
-            // $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/wronepage/Scroller.min.js';
-            // $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/wronepage/Onepage.min.js';
-            $GLOBALS['TL_BODY'][] = '<script src="bundles/wronepage/Scroller.min.js"></script>';
-            $GLOBALS['TL_BODY'][] = '<script src="bundles/wronepage/Onepage.min.js"></script>';
+        if ($model->loadDefaultJavascript) {
+            $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/cgoitcontaoonepage/Scroller.min.js';
+            $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/cgoitcontaoonepage/Onepage.min.js';
+            //            $GLOBALS['TL_BODY'][] = '<script src="bundles/cgoitcontaoonepage/Scroller.min.js"></script>';
+            //            $GLOBALS['TL_BODY'][] = '<script src="bundles/cgoitcontaoonepage/Onepage.min.js"></script>';
         }
 
         $arrArticle = [];
@@ -56,9 +65,11 @@ class ModuleWrOnepage extends Module
             }
         }
 
-        $this->Template->request = StringUtil::ampersand(Environment::get('indexFreeRequest'));
-        $this->Template->skipId = 'skipNavigation'.$this->id;
-        $this->Template->loadStandartJavascipt = $this->loadDefaultJavascript;
-        $this->Template->arrArticle = $arrArticle;
+        $template->request = StringUtil::ampersand(Environment::get('indexFreeRequest'));
+        $template->skipId = 'skipNavigation'.$model->id;
+        $template->loadStandartJavascipt = $model->loadDefaultJavascript;
+        $template->arrArticle = $arrArticle;
+
+        return $template->getResponse();
     }
 }
