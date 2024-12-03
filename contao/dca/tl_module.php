@@ -19,5 +19,5 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['loadDefaultJavascript'] =
     'exclude' => true,
     'inputType' => 'checkbox',
     'eval' => ['tl_class' => 'w50'],
-    'sql' => "char(1) NOT NULL default ''",
+    'sql' => ['type' => 'string', 'length' => 1, 'fixed' => true, 'default' => ''],
 ];

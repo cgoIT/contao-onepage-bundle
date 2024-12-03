@@ -11,7 +11,7 @@ declare(strict_types=1);
  * @license    LGPL-3.0-or-later
  */
 
-$GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = preg_replace('/{expert_legend:hide}/', '{onepage_legend:hide},in_onepage;{expert_legend:hide}', $GLOBALS['TL_DCA']['tl_article']['palettes']['default']);
+$GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = preg_replace('/{expert_legend:hide}/', '{onepage_legend:hide},in_onepage;{expert_legend:hide}', (string) $GLOBALS['TL_DCA']['tl_article']['palettes']['default']);
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['in_onepage'] =
 [
@@ -19,5 +19,5 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['in_onepage'] =
     'exclude' => true,
     'inputType' => 'checkbox',
     'eval' => ['tl_class' => 'w50'],
-    'sql' => "char(1) NOT NULL default ''",
+    'sql' => ['type' => 'string', 'length' => 1, 'fixed' => true, 'default' => ''],
 ];
