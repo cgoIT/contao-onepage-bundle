@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.0...v4.0.1) (2024-12-03)
+
+
+### Bug Fixes
+
+* use Doctrine Schema Representation for db columns ([a8b6509](https://github.com/cgoIT/contao-onepage-bundle/commit/a8b650908e0c5788871eb5c34a992d2842bcb545))
+
 ## [4.0.0](https://github.com/cgoIT/contao-onepage-bundle/compare/3.0.0...v4.0.0) (2024-05-29)
 
 
