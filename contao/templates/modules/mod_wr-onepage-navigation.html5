@@ -1,4 +1,4 @@
-<?php if($this->arrArticle):?>
+<?php if ($this->arrArticle):?>
 <nav <?= $this->cssID?> class="<?= $this->class; ?>">
     <?php if ($this->headline): ?>
         <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
@@ -7,7 +7,7 @@
     <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
 
     <ul>
-        <?php foreach($this->arrArticle as $artNav): ?>
+        <?php foreach ($this->arrArticle as $artNav): ?>
             <li> <a href="<?= $this->uri?>#<?= $artNav['alias']?>"><?= $artNav['title'] ?></a></li>
         <?php endforeach; ?>
 
@@ -15,7 +15,7 @@
 
     <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
 
-    <?php if($this->loadDefaultJavascript): ?>
+    <?php if ($this->loadDefaultJavascript): ?>
         <script>
             window.onload = function() {
                 onepage = new Onepage();
