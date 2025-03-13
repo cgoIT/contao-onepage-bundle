@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.2](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.1...v4.0.2) (2025-02-11)
+
+
+### Miscellaneous Chores
+
+* fix copyright ([066ab0e](https://github.com/cgoIT/contao-onepage-bundle/commit/066ab0ed0356764559050b37440bb0c02cc36059))
+
 ## [4.0.1](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.0...v4.0.1) (2024-12-03)
 
 
