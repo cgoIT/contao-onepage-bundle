@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.3](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.2...v4.0.3) (2025-03-13)
+
+
+### Miscellaneous Chores
+
+* fix build-tools errors ([869540b](https://github.com/cgoIT/contao-onepage-bundle/commit/869540b2127473c2abd7eba03440c8c041e7eb8b))
+
 ## [4.0.2](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.1...v4.0.2) (2025-02-11)
 
 
