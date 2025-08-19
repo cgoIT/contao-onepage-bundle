@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.4](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.3...v4.0.4) (2025-08-19)
+
+
+### Miscellaneous Chores
+
+* update version contraints ([5b73183](https://github.com/cgoIT/contao-onepage-bundle/commit/5b73183c125a88c9776312dbfa7954caeadd96bc))
+
 ## [4.0.3](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.2...v4.0.3) (2025-03-13)
 
 
