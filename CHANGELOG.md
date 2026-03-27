@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.5](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.4...v4.0.5) (2026-03-27)
+
+
+### Miscellaneous Chores
+
+* integrate twig-cs-fixer ([d3d6320](https://github.com/cgoIT/contao-onepage-bundle/commit/d3d63205ac3d8e5b44a6bbfa6fa0a14ad3505c3d))
+* update copyright header ([9905043](https://github.com/cgoIT/contao-onepage-bundle/commit/99050433b97670ad2ae2e19fe1cd69e8a641fd64))
+
 ## [4.0.4](https://github.com/cgoIT/contao-onepage-bundle/compare/v4.0.3...v4.0.4) (2025-08-19)
 
 
