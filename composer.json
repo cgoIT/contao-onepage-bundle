@@ -10,7 +10,7 @@
     "article",
     "contao"
   ],
-  "version": "4.0.4",
+  "version": "4.0.5",
   "homepage": "https://github.com/cgoIT/contao-onepage-bundle",
   "license": "GPL-3.0-or-later",
   "authors": [
